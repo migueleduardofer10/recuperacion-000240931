@@ -19,11 +19,20 @@ export class EspacioService {
     return this.http.post<Espacio>(this.basePath, espacio);
   }
 
-  updateEspacio(id:any,espacio: Espacio){
-    return this.http.put<Espacio>(`${this.basePath}/${id}`, espacio);
+  updateEspacio(id: number, espacio: Espacio){
+    return this.http.put(`${this.basePath}/${id}`, espacio);
   }
 
   deleteEspacio(id:any){
     return this.http.delete<Espacio>(`${this.basePath}/${id}`)
   }
+  //gET ESPACIO POR ID
+  getEspacioByID(id: number){
+    return this.http.get<Espacio>(`${this.basePath}/${id}`);
+  }
+
+ 
+
+
+    
 }

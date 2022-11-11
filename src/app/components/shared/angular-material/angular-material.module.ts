@@ -35,7 +35,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatSnackBarModule,
     MatButtonModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatRadioModule
+
   ],
 })
 export class AngularMaterialModule {}

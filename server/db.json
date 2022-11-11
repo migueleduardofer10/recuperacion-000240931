@@ -1,25 +1,31 @@
 {
   "espacios": [
     {
-      "id": 1,
-      "estacionamiento": "San Borja",
-      "piso": 1,
-      "numero": "34-A",
-      "estado": "ocupado"
-    },
-    {
-      "id": 2,
-      "estacionamiento": "San Miguel",
-      "piso": 2,
-      "numero": "35-B",
-      "estado": "disponible"
-    },
-    {
       "id": 3,
-      "estacionamiento": "dsa",
-      "piso": "dsds",
+      "estacionamiento": "mellyc",
+      "piso": "mellyc",
+      "numero": "mellyc",
+      "estado": "mellyc"
+    },
+    {
+      "id": 4,
+      "estacionamiento": "ds",
       "numero": "dsds",
-      "estado": "dsd"
+      "estado": "dsds"
+    },
+    {
+      "id": 5,
+      "estacionamiento": "dss",
+      "piso": null,
+      "numero": "ds",
+      "estado": "dsds"
+    },
+    {
+      "id": 6,
+      "estacionamiento": "dsds",
+      "piso": null,
+      "numero": "ds",
+      "estado": "ds"
     }
   ]
 }

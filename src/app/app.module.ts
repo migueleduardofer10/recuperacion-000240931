@@ -10,13 +10,15 @@ import { NewEspacioComponent } from './components/new-espacio/new-espacio.compon
 import { ListEspaciosComponent } from './components/list-espacios/list-espacios.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditEspacioComponent } from './components/edit-espacio/edit-espacio.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
     NewEspacioComponent,
-    ListEspaciosComponent
+    ListEspaciosComponent,
+    EditEspacioComponent
   ],
   imports: [
     BrowserModule,
