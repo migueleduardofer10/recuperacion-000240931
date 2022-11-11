@@ -1,31 +1,26 @@
 {
-  "espacios": [
+  "venta": [
     {
-      "id": 3,
-      "estacionamiento": "mellyc",
-      "piso": "mellyc",
-      "numero": "mellyc",
-      "estado": "mellyc"
+      "numero": "3",
+      "producto": "ds",
+      "cantidad": "2",
+      "precio": "3",
+      "id": 11
     },
     {
-      "id": 4,
-      "estacionamiento": "ds",
-      "numero": "dsds",
-      "estado": "dsds"
+      "numero": "1",
+      "producto": "leche",
+      "cantidad": "2",
+      "precio": "3",
+      "id": 12
     },
     {
-      "id": 5,
-      "estacionamiento": "dss",
-      "piso": null,
-      "numero": "ds",
-      "estado": "dsds"
-    },
-    {
-      "id": 6,
-      "estacionamiento": "dsds",
-      "piso": null,
-      "numero": "ds",
-      "estado": "ds"
+      "numero": "2",
+      "producto": "leche",
+      "cantidad": "3",
+      "precio": "2",
+      "total": 6,
+      "id": 13
     }
   ]
 }

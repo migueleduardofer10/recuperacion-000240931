@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Espacio } from 'src/app/models/espacio';
+import { Venta } from 'src/app/models/espacio';
 import { EspacioService } from 'src/app/service/espacio.service';
-import {MatRadioModule} from '@angular/material/radio';
 
 @Component({
   selector: 'app-add-employee',
@@ -15,6 +14,7 @@ export class NewEspacioComponent implements OnInit {
 
   myForm!:FormGroup;
   color = "accent";
+  
 
   constructor(
     private fb:FormBuilder,
@@ -25,24 +25,26 @@ export class NewEspacioComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm=this.fb.group({
-      estacionamiento:['',[Validators.required, Validators.maxLength(70)]],
-      piso:['',[Validators.required]],
-      numero:['',[Validators.required,Validators.maxLength(5)]],
-      estado:['',[Validators.required]],
+      numero:[''],
+      producto:[''],
+      cantidad:[''],
+      precio:[''],
+    
     })
   }
 
   saveEspacio(){
     
-    const espacio: Espacio={
-      id:0,
-      estacionamiento: this.myForm.get('estacionamiento')?.value,
-      piso:this.myForm.get('piso')?.value,
-      numero:this.myForm.get('numero')?.value,
-      estado:this.myForm.get('estado')?.value,
+    const venta: Venta={
+      numero: this.myForm.get('numero')?.value,
+      producto:this.myForm.get('producto')?.value,
+      cantidad: this.myForm.get('cantidad')?.value,
+      precio: this.myForm.get('precio')?.value, 
+      //Lllamar a la funcion total y pasarle el precio y la cantidad
+      total: this.total(this.myForm.get('cantidad')?.value,this.myForm.get('precio')?.value)
     };
 
-    this.espacioService.addEspacio(espacio)
+    this.espacioService.addVenta(venta)
         .subscribe({
           next: (data)=>{
             this.snackBar.open("Registro OK",'',{
@@ -55,4 +57,11 @@ export class NewEspacioComponent implements OnInit {
           }
         })
   }
-}
+
+  //Implementar la funcion total para devolver la cantidad * producto 
+  total(cantidad:number,precio:number){
+    return cantidad*precio;
+  
+  }
+  }
+

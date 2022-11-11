@@ -1,7 +1,7 @@
-export class Espacio{
-    id: number;
-    estacionamiento: string;
-    piso: number;
-    numero: string ; 
-    estado: string ;
+export interface Venta{
+    numero: number;
+    producto: string;
+    cantidad: number;
+    precio: number ; 
+    total: number;
 }
