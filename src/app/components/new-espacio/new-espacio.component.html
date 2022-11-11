@@ -26,23 +26,6 @@
                     <mat-label>Piso</mat-label>
                     <input matInput formControlName="piso" required>
                 </mat-form-field>
-
-                <label id="example-radio-group-label">Pick your favorite season</label>
-                <mat-radio-group
-                aria-labelledby="example-radio-group-label"
-                class="example-radio-group"
-                [(ngModel)]="favoriteSeason">
-                <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
-                    {{season}}
-                </mat-radio-button>
-                </mat-radio-group>
-                <div>Your favorite season is: {{favoriteSeason}}</div>
-
-                <div *ngIf="myForm.get('piso')?.hasError('required') &&
-                    myForm.get('piso')?.touched">
-                    <span>Este campo es obligatorio</span>
-                </div>
-
             </div>
 
             <div class="col-lg-12">

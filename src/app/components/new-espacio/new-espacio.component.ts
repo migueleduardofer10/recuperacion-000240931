@@ -12,7 +12,9 @@ import {MatRadioModule} from '@angular/material/radio';
   styleUrls: ['./new-espacio.component.css']
 })
 export class NewEspacioComponent implements OnInit {
-
+  /*
+  Nueva modificacion 
+  */
   myForm!:FormGroup;
   color = "accent";
 
