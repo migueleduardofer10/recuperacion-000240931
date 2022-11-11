@@ -21,6 +21,22 @@
       "precio": "2",
       "total": 6,
       "id": 13
+    },
+    {
+      "numero": "3",
+      "producto": "azucar",
+      "cantidad": "3",
+      "precio": "2",
+      "total": 6,
+      "id": 14
+    },
+    {
+      "numero": "5",
+      "producto": "chocolate",
+      "cantidad": "4",
+      "precio": "5",
+      "total": 20,
+      "id": 15
     }
   ]
 }

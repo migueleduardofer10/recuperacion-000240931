@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Venta } from 'src/app/models/espacio';
-import { EspacioService } from 'src/app/service/espacio.service';
+import { VentaService } from 'src/app/service/espacio.service';
 
 @Component({
   selector: 'app-add-employee',
@@ -18,7 +18,7 @@ export class NewEspacioComponent implements OnInit {
 
   constructor(
     private fb:FormBuilder,
-    private espacioService: EspacioService,
+    private ventaService: VentaService,
     private router:Router,
     private snackBar:MatSnackBar
   ) { }
@@ -33,7 +33,7 @@ export class NewEspacioComponent implements OnInit {
     })
   }
 
-  saveEspacio(){
+  saveVenta(){
     
     const venta: Venta={
       numero: this.myForm.get('numero')?.value,
@@ -44,7 +44,7 @@ export class NewEspacioComponent implements OnInit {
       total: this.total(this.myForm.get('cantidad')?.value,this.myForm.get('precio')?.value)
     };
 
-    this.espacioService.addVenta(venta)
+    this.ventaService.addVenta(venta)
         .subscribe({
           next: (data)=>{
             this.snackBar.open("Registro OK",'',{

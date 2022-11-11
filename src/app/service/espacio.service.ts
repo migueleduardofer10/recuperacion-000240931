@@ -6,7 +6,7 @@ import { Venta } from '../models/espacio';
 @Injectable({
   providedIn: 'root',
 })
-export class EspacioService {
+export class VentaService {
   basePath: string = environment.basePath;
 
   constructor(private http: HttpClient) {}
